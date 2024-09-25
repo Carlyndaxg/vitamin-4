@@ -1,0 +1,39 @@
+/* all ipmorted fonts */
+@font-face {
+    font-family: RoundedBold;
+    src: url(M_PLUS_Rounded_1c/MPLUSRounded1c-Bold.ttf)
+}
+@font-face {
+    font-family:RoundedRegular;
+    src: url(M_PLUS_Rounded_1c/MPLUSRounded1c-Regular.ttf)
+}
+@font-face {
+    font-family: PottaOne;
+    src: url(Potta_One/PottaOne-Regular.ttf);
+} 
+/* fonts */
+header, #largefont {
+    font-family: PottaOne
+}
+#roundbold {
+    font-family: RoundedBold
+}
+#roundregular, footer {
+    font-family: RoundedRegular
+}
+/* font sizing */
+#largesize {
+    font-size: 26px
+}
+#smallerheader {
+    font-size: 18px
+}
+#largestsize {
+    font-size: 34px
+}
+#smallsize {
+    font-size: 16px
+}
+#contactsize {
+    font-size: 24px
+} 
