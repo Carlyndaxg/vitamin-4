@@ -13,30 +13,50 @@
 } 
 /* fonts */
 header, #largefont {
-    font-family: PottaOne
+    font-family: PottaOne;
 }
 #roundbold {
-    font-family: RoundedBold
+    font-family: RoundedBold;
 }
 #roundregular, footer {
-    font-family: RoundedRegular
+    font-family: RoundedRegular;
 }
 /* font sizing */
 #largesize {
-    font-size: 26px
+    font-size: 26px;
 }
 #smallerheader {
-    font-size: 18px
+    font-size: 18px;
 }
 #largestsize {
-    font-size: 34px
+    font-size: 34px;
 }
 #smallsize {
-    font-size: 16px
+    font-size: 16px;
 }
 #contactsize {
-    font-size: 24px
+    font-size: 24px;
 } 
 footer {
-    font-size: 9px
+    font-size: 9px;
+}
+/* contact me bullet point color */
+li::marker {
+    color: white;
+}
+/* center the header and footer */
+header {
+    top: 0; 
+    text-align: center;
+}
+main {
+    padding: 20px;
+}
+footer {
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    max-height: 90%
 }
