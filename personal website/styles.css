@@ -118,3 +118,10 @@ body {
     top: 160px;
     left: 680px;
 }
+/* 3d model */
+#model3d {
+    width: 48vw;
+    height: 48vh;  
+    margin: 0;
+    text-align: center;
+}

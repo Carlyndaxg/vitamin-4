@@ -40,7 +40,8 @@
     </header>
 
     <main>
-        <p id="roundregular" style="color:white;"> Pet my cat, Harry! </p>
+        <div id="model3d"></div>
+        <p id="roundregular" style="color:white;"> Play with my cat, Harry! </p>
         <span id="largestsize"><p id="largefont" style="color:white;"> Carlynda Gao </p></span>
         <p id="roundbold" style="color:white;"> Hello! </p>
         <span id="smallsize"><p id="roundregular" style="color:white;"> I'm Carlynda Gao, an undergraduate student at the University of California, Berkeley studying computer science, (pure) mathematics, and political economy. </p></span>
@@ -50,6 +51,17 @@
         <p style="color:#5A5A5A">"minecraft jellie cat" (https://skfb.ly/oD8n7) by JohnElkes is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).</p>
         <p style="color:#5A5A5A">&copy; 2024 Carlynda Gao</p>
     </footer>
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@v0.163.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@v0.163.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="main.js"></script>
+ 
 </body>
 
 </html>
