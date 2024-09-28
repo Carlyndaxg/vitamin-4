@@ -3,13 +3,15 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 // smooth edge effect with antialias true 
-const renderer = new THREE.WebGLRenderer({antialias: true})
+const renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 
 renderer.setSize(document.getElementById('model3d').clientWidth, document.getElementById('model3d').clientHeight);
 // renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setClearColor(0x222222);  // default color on screen with no model 
 renderer.setPixelRatio(window.devicePixelRatio);  // renders across different devices 
+
+// set background color transparent with alpha 0
+renderer.setClearColor(0x000000, 0)
 
 // add shadows
 renderer.shadowMap.enabled = true;

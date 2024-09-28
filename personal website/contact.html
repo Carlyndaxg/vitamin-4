@@ -1,50 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Carlynda Gao - Contact </title>
     <link rel="stylesheet" href="styles.css"> <!-- link to css file -->
 </head>
-<body style="background-color:#222222">
+<body>
     <header>
         <div class="header-flex-container">
             <div>
-                <span id="largesize"><a href="index.html" title="Homepage" style="color:white;"> Carlynda Gao &nbsp; </a></span>
+                <span id="largesize"><a href="index.html" title="Homepage" style="color: var(--body-text-color)"> Carlynda Gao &nbsp; </a></span>
             </div>
             <div>
-                <span id="smallerheader"><a href="projects.html" title="Projects" style="color:white;"> Projects &nbsp; ·</a>
+                <span id="smallerheader"><a href="projects.html" title="Projects" style="color: var(--body-text-color)"> Projects &nbsp; ·</a>
             </div>
             <div>
-                <a href="about.html" title="About Me" style="color:white;"> About &nbsp; ·</a>
+                <a href="about.html" title="About Me" style="color: var(--body-text-color)"> About &nbsp; ·</a>
             </div>
             <div>
-                <a href="CarlyndaGao-Resume.pdf" title="Resume" target="_blank" style="color:white;"> Resume &nbsp; ·</a> <!-- needs fixing -->
+                <a href="CarlyndaGao-Resume.pdf" title="Resume" target="_blank" style="color: var(--body-text-color)"> Resume &nbsp; ·</a> <!-- needs fixing -->
             </div>
             <div>
-                <a href="contact.html" title="Contact" style="color:white;"> Contact </a></span></span>
+                <a href="contact.html" title="Contact" style="color: var(--body-text-color)"> Contact </a></span>
             </div>
-            <div>
-                <a href="index.html" title="Display Mode">  <!-- change the href later -->
-                    <img src="display.png" height="70" title="Display Mode" alt="Change the display mode" id="displayimage">
-                    </a>
+            <div class="header-icon">
+                <button id="theme-switch">
+                    <img src="light-mode-icon.png" height="70" title="Display Mode" alt="Change the display mode" id="displayimage"></a>
+                    <img src="dark-mode-icon.png" height="70" title="Display Mode" alt="Change the display mode" id="displayimage2"></a>
+                </button>
             </div>
         </div>
     </header>
 
     <main id="contact-body">
         <img src="Harry2.png" height="320" title="My cat, Harry!" alt="This is an image of my cat, Harry" id="contact-cat"><!-- height and width are in pixels, scale proportionally w/ e/o but can be changed individually. alt is for screen reader-->
-        <span id="largestsize"><p id="largefont" style="color:white;"> Contact </p></span>
-        <ul><li><span id="contactsize"><p id="roundbold" style="color:white;"> Email: </p></span></li>
-        <span id="smallsize"><p id="roundregular"><a href="mailto:carlyndaxg@berkeley.edu" style="color:white;"> <ins>carlyndaxg@berkeley.edu</ins> </a></p></span>
-        <li><span id="contactsize"><p id="roundbold" style="color:white;"> LinkedIn: </p></span></li>
-        <span id="smallsize"><p id="roundregular"><a href="https://www.linkedin.com/in/carlyndag/" target=_blank style="color:white;"> <ins>linkedin.com/in/carlyndag</ins> </a></p></span>
-        <li><span id="contactsize"><p id="roundbold" style="color:white;"> GitHub: </p></span></li>
-        <span id="smallsize"><p id="roundregular"><a href="https://www.github.com/Carlyndaxg" target="_blank" style="color:white;"> <ins>github.com/Carlyndaxg</ins> </a></p></span></ul>
+        <span id="largestsize"><p id="largefont" style="color: var(--body-text-color);"> Contact </p></span>
+        <ul><li><span id="contactsize"><p id="roundbold" style="color: var(--body-text-color);"> Email: </p></span></li>
+        <span id="smallsize"><p id="roundregular"><a href="mailto:carlyndaxg@berkeley.edu" style="color: var(--body-text-color);"> <ins>carlyndaxg@berkeley.edu</ins> </a></p></span>
+        <li><span id="contactsize"><p id="roundbold" style="color: var(--body-text-color);"> LinkedIn: </p></span></li>
+        <span id="smallsize"><p id="roundregular"><a href="https://www.linkedin.com/in/carlyndag/" target=_blank style="color: var(--body-text-color);"> <ins>linkedin.com/in/carlyndag</ins> </a></p></span>
+        <li><span id="contactsize"><p id="roundbold" style="color: var(--body-text-color);"> GitHub: </p></span></li>
+        <span id="smallsize"><p id="roundregular"><a href="https://www.github.com/Carlyndaxg" target="_blank" style="color: var(--body-text-color);"> <ins>github.com/Carlyndaxg</ins> </a></p></span></ul>
     </main>
 
     <footer>
-        <p style="color:#5A5A5A">&copy; 2024 Carlynda Gao</p>
+        <p>&copy; 2024 Carlynda Gao</p>
     </footer>
+
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@v0.163.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@v0.163.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="main.js" defer></script>
+    <script type="module" src="display.js" defer></script>
 </body>
 </html>

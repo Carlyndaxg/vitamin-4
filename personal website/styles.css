@@ -42,16 +42,17 @@ footer {
 }
 /* contact me bullet point color */
 li::marker {
-    color: white;
+    color: var(--body-text-color);
 }
 /* center the header and footer, make sticky */
 header {
     text-align: center;
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 main {
-    padding: 20px;
+    padding-bottom: 20px;
 }
 footer {
     width: 100%;
@@ -59,29 +60,27 @@ footer {
     text-align: center;
     padding: 10px 0;
     position: relative;
-    max-height: 90%
 }
 body {
     padding-left: 330px;
     padding-right: 330px;
 }
 /* display icon positioning and header positioning */
-#displayimage {  
-    margin: 0 30px 0 0;
-}
-#headertext {
-    margin-top: 0
-}
 .header-flex-container {
-    padding-left: 15px;
     display: flex; 
     flex-direction: row;
     flex-wrap: wrap; 
     justify-content: center;
+    align-content: center;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(34, 34, 34, 0.8);
     z-index: 10;
+    background-color: var(--header-color);
+    width: 730px;
+    height: 60px;
+}
+.header-icon {
+    height: 75px;
 }
 /* get rid of underline on page linkes */
 .header a:hover, a:visited, a:link, a:active {
@@ -91,26 +90,21 @@ body {
 .about-image-container {
     display: inline-block;
 }
-.about-text-container {
-    z-index: 1;
-}
 #about-cat {
     position: absolute; 
-    z-index: 2; 
-    top: 85px; 
-    left: 512px;
-}
-#about-header {
-    z-index: 10;
+    top: 70px; 
+    left: 492px;
 }
 #about-main {
     padding-top: 45px;
+    z-index: -2;
 }
 /* about page headshot positioning */
 #headshot-image {
     position: absolute;
     top: 85px;
-    right: 330px;
+    right: 305px;
+    z-index: -1;
 }
 /* contact page image line up with text */
 #contact-cat {
@@ -124,4 +118,45 @@ body {
     height: 48vh;  
     margin: 0;
     text-align: center;
+    background: transparent;
+}
+/* dark and light mode display */
+:root {
+    --base-color: #222222;
+    --body-text-color: white;
+    --footer-text-color: #5a5a5a;
+    --header-color: rgb(34, 34, 34, 0.95);
+}
+body {
+    background-color: var(--base-color);
+    color: var(--body-text-color);
+}
+header {
+    background-color: var(--base-color);
+    color: var(--body-text-color);
+}
+footer {
+    background-color: var(--base-color);
+    color: var(--footer-text-color)
+}
+.lightmode {
+    --base-color: #f5f2f2;
+    --body-text-color: #222222;
+    --footer-text-color: #a8a8a8;
+    --header-color: rgb(245, 242, 242, 0.95);
+}
+#theme-switch {
+    height: 50px;
+    width: 50px;
+    background: transparent;
+    border: none;
+}
+#theme-switch :last-child{
+    display: none;
+}
+.lightmode #theme-switch :first-child {
+    display: none;
+}
+.lightmode #theme-switch :last-child{
+    display: block;
 }
