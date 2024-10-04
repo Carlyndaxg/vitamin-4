@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Carlynda Gao - Projects </title>
     <link rel="stylesheet" href="styles.css"> <!-- link to css file -->
+    <script type="module" src="display.js" defer></script>
 </head>
 <body>
     <header>
@@ -13,16 +14,16 @@
                 <span id="largesize"><a href="index.html" title="Homepage" style="color: var(--body-text-color)"> Carlynda Gao &nbsp; </a></span>
             </div>
             <div>
-                <span id="smallerheader"><a href="projects.html" title="Projects" style="color: var(--body-text-color)"> Projects &nbsp; ·</a>
+                <span id="smallerheader"><a href="projects.html" title="Projects" style="color: var(--body-text-color)" id="smallerheader"> Projects &nbsp; ·</a>
             </div>
             <div>
-                <a href="about.html" title="About Me" style="color: var(--body-text-color)"> About &nbsp; ·</a>
+                <a href="about.html" title="About Me" style="color: var(--body-text-color)" id="smallerheader"> About &nbsp; ·</a>
             </div>
             <div>
-                <a href="CarlyndaGao-Resume.pdf" title="Resume" target="_blank" style="color: var(--body-text-color)"> Resume &nbsp; ·</a> <!-- needs fixing -->
+                <a href="CarlyndaGao-Resume.pdf" title="Resume" target="_blank" style="color: var(--body-text-color)" id="smallerheader"> Resume &nbsp; ·</a> <!-- needs fixing -->
             </div>
             <div>
-                <a href="contact.html" title="Contact" style="color: var(--body-text-color)"> Contact </a></span>
+                <a href="contact.html" title="Contact Me" style="color: var(--body-text-color)" id="smallerheader"> Contact </a>
             </div>
             <div class="header-icon">
                 <button id="theme-switch">
@@ -34,7 +35,7 @@
     </header>
 
     <main>
-        <span id="largestsize"><p id="largefont" style="color: var(--body-text-color);"> Projects </p></span>
+        <span id="largestsize"><p id="largefont" style="color: var(--body-text-color); padding-top: 10px;"> Projects </p></span>
     </main>
 
     <footer>
@@ -51,7 +52,6 @@
       }
     </script>
     <script type="module" src="main.js" defer></script>
-    <script type="module" src="display.js" defer></script>
 </body>
 
 </html>

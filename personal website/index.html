@@ -7,6 +7,7 @@
     <meta name="author" content="Carlynda Gao">
     <title>Carlynda Gao - Homepage</title>
     <link rel="stylesheet" href="styles.css"> <!-- link to css file -->
+    <script type="module" src="display.js" defer></script>
 </head>
 
 <body>
@@ -16,16 +17,16 @@
                 <span id="largesize"><a href="index.html" title="Homepage" style="color: var(--body-text-color)"> Carlynda Gao &nbsp; </a></span>
             </div>
             <div>
-                <span id="smallerheader"><a href="projects.html" title="Projects" style="color: var(--body-text-color)"> Projects &nbsp; ·</a>
+                <a href="projects.html" title="Projects" style="color: var(--body-text-color)" id="smallerheader"> Projects &nbsp; ·</a>
             </div>
             <div>
-                <a href="about.html" title="About Me" style="color: var(--body-text-color)"> About &nbsp; ·</a>
+                <a href="about.html" title="About Me" style="color: var(--body-text-color)" id="smallerheader"> About &nbsp; ·</a>
             </div>
             <div>
-                <a href="CarlyndaGao-Resume.pdf" title="Resume" target="_blank" style="color: var(--body-text-color)"> Resume &nbsp; ·</a> <!-- needs fixing -->
+                <a href="CarlyndaGao-Resume.pdf" title="Resume" target="_blank" style="color: var(--body-text-color)" id="smallerheader"> Resume &nbsp; ·</a> <!-- needs fixing -->
             </div>
             <div>
-                <a href="contact.html" title="Contact" style="color: var(--body-text-color)"> Contact </a></span>
+                <a href="contact.html" title="Contact Me" style="color: var(--body-text-color)" id="smallerheader"> Contact </a>
             </div>
             <div class="header-icon">
                 <button id="theme-switch">
@@ -59,7 +60,6 @@
       }
     </script>
     <script type="module" src="main.js" defer></script>
-    <script type="module" src="display.js" defer></script>
 </body></div>
 
 </html>

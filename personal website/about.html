@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Carlynda Gao - About </title>
     <link rel="stylesheet" href="styles.css"> <!-- link to css file -->
+    <script type="module" src="display.js" defer></script>
 </head>
 <body id="about-entire-body"> <!-- can also separate css styles with semicolon, or utilize div tag-->
     <header>
@@ -13,16 +14,16 @@
                 <span id="largesize"><a href="index.html" title="Homepage" style="color: var(--body-text-color)"> Carlynda Gao &nbsp; </a></span>
             </div>
             <div>
-                <span id="smallerheader"><a href="projects.html" title="Projects" style="color: var(--body-text-color)"> Projects &nbsp; ·</a>
+                <a href="projects.html" title="Projects" style="color: var(--body-text-color)" id="smallerheader"> Projects &nbsp; ·</a>
             </div>
             <div>
-                <a href="about.html" title="About Me" style="color: var(--body-text-color)"> About &nbsp; ·</a>
+                <a href="about.html" title="About Me" style="color: var(--body-text-color)" id="smallerheader"> About &nbsp; ·</a>
             </div>
             <div>
-                <a href="CarlyndaGao-Resume.pdf" title="Resume" target="_blank" style="color: var(--body-text-color)"> Resume &nbsp; ·</a> <!-- needs fixing -->
+                <a href="CarlyndaGao-Resume.pdf" title="Resume" target="_blank" style="color: var(--body-text-color)" id="smallerheader"> Resume &nbsp; ·</a> <!-- needs fixing -->
             </div>
             <div>
-                <a href="contact.html" title="Contact" style="color: var(--body-text-color)"> Contact </a></span>
+                <a href="contact.html" title="Contact Me" style="color: var(--body-text-color)" id="smallerheader"> Contact </a>
             </div>
             <div class="header-icon">
                 <button id="theme-switch">
@@ -34,7 +35,10 @@
     </header>
 
     <main id="about-main">
-        <img src="headshot1.png" height="170" title="Personal headshot" alt="This is an image of me" id="headshot-image">
+        <span id="image-switch">
+        <img src="headshot1.png" height="170px" title="Personal headshot" alt="This is an image of me" id="headshot-image">
+        <img src="headshot1-lightmode.png" height="150" title="Personal headshot" alt="This is an image of me" id="headshot-image" style="right: 347px; top: 90px;">
+        </span>
         <div id="about-image-container">
             <img src="Harry1.png" height="200" title="My cat, Harry!" alt="This is an image of my cat, Harry" id="about-cat"> <!-- height and width are in pixels, scale proportionally w/ e/o but can be changed individually. alt is for screen reader-->
         </div>
@@ -70,6 +74,5 @@
       }
     </script>
     <script type="module" src="main.js" defer></script>
-    <script type="module" src="display.js" defer></script>
 </body>
 </html>

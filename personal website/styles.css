@@ -26,7 +26,7 @@ header, #largefont {
     font-size: 20px;
 }
 #smallerheader {
-    font-size: 18px;
+    font-size: 17px;
 }
 #largestsize {
     font-size: 34px;
@@ -158,5 +158,18 @@ footer {
     display: none;
 }
 .lightmode #theme-switch :last-child{
+    display: block;
+}
+#image-switch {
+    background: transparent;
+    border: none;
+}
+#image-switch :last-child{
+    display: none;
+}
+.lightmode #image-switch :first-child {
+    display: none;
+}
+.lightmode #image-switch :last-child{
     display: block;
 }
