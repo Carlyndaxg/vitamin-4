@@ -24,7 +24,7 @@ const scene = new THREE.Scene()
 
 // set up camera, asepct ratio, near/far plane, position 
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
-camera.position.set(5, 5, 10);
+camera.position.set(5, 3, 10);
 camera.lookAt(0, 0, 0);  // camera looks at origin of scene 
 
 // orbiting controls 
@@ -61,7 +61,6 @@ scene.add(spotLight)
 
 const bottomdirectionalLight = new THREE.DirectionalLight(0xffffff, 5);  // white light 
 bottomdirectionalLight.position.set(0, 30, 0).normalize();  // position 
-// directionalLight.lookAt(0, 1, 0);  // makes light look at cat
 bottomdirectionalLight.castShadow = true;  // shadow casting
 scene.add(bottomdirectionalLight);
 
@@ -102,8 +101,10 @@ loader.load('scene.gltf', (gltf) => {
         }
     });
     mesh.position.set(0, -1.5, -1);
+    mesh.rotation.y = -Math.PI / 2;
     mesh.scale.set(5, 5, 5);
     scene.add(mesh);
+
 // },  undefined, function(error) {
     // console.error("An error occurred during model loading", error); 
 });  // check file path 
@@ -118,10 +119,17 @@ loader.load('scene.gltf', (gltf) => {
 // });
 
 window.addEventListener('resize', () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
+  const model3dContainer = document.getElementById('model3d');
+  camera.aspect = model3dContainer.clientWidth / model3dContainer.clientHeight;
   camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setSize(model3dContainer.clientWidth, model3dContainer.clientHeight);
 });
+
+// window.addEventListener('resize', () => {
+  // camera.aspect = window.innerWidth / window.innerHeight;
+  // camera.updateProjectionMatrix();
+  // renderer.setSize(window.innerWidth, window.innerHeight);
+// });
 
 function animate() {
     requestAnimationFrame(animate);

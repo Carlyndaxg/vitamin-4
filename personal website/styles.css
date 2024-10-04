@@ -112,7 +112,7 @@ footer {
 #model3d {
     width: 48vw;
     height: 48vh;  
-    margin: 0;
+    margin: 0 auto;
     text-align: center;
     background: transparent;
 }
@@ -169,8 +169,15 @@ footer {
 .lightmode #image-switch :last-child{
     display: block;
 }
-/* decrease left and right padding as browser size decreases horizontally */
+/* decrease left and right padding as browser size decreases horizontally, 330px = 22.92vw */
 body {
-    padding-left: 330px;
-    padding-right: 330px;
+    padding-left: calc(22.92vw + (330px - 22.92vw));
+    padding-right: calc(22.92vw + (330px - 22.92vw));
+}
+
+@media (max-width: 1440px) {
+    body {
+        padding-left: calc(330px - ( (1440px - 100vw) / 2 ));
+        padding-right: calc(330px - ( (1440px - 100vw) / 2 ));
+    }
 }
