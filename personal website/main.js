@@ -24,7 +24,7 @@ const scene = new THREE.Scene()
 
 // set up camera, asepct ratio, near/far plane, position 
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
-camera.position.set(5, 3, 10);
+camera.position.set(5, 3.5, 10);
 camera.lookAt(0, 0, 0);  // camera looks at origin of scene 
 
 // orbiting controls 
@@ -64,22 +64,22 @@ bottomdirectionalLight.position.set(0, 30, 0).normalize();  // position
 bottomdirectionalLight.castShadow = true;  // shadow casting
 scene.add(bottomdirectionalLight);
 
-const leftdirectionalLight = new THREE.DirectionalLight(0xffffff, 1.2); 
+const leftdirectionalLight = new THREE.DirectionalLight(0xffffff, 1.7); 
 leftdirectionalLight.position.set(-30, 0, 0).normalize();
 leftdirectionalLight.castShadow = true;
 scene.add(leftdirectionalLight);
 
-const rightdirectionalLight = new THREE.DirectionalLight(0xffffff, 1.2); 
+const rightdirectionalLight = new THREE.DirectionalLight(0xffffff, 1.7); 
 rightdirectionalLight.position.set(30, 0, 0).normalize();
 leftdirectionalLight.castShadow = true;
 scene.add(rightdirectionalLight);
 
-const frontdirectionalLight = new THREE.DirectionalLight(0xfffffff, 1.5);
+const frontdirectionalLight = new THREE.DirectionalLight(0xfffffff, 1.7);
 frontdirectionalLight.position.set(0, 0, 30).normalize();
 frontdirectionalLight.castShadow = true;
 scene.add(frontdirectionalLight);
 
-const backdirectionalLight = new THREE.DirectionalLight(0xffffff, 1.5);
+const backdirectionalLight = new THREE.DirectionalLight(0xffffff, 1.7);
 backdirectionalLight.position.set(0, 0, -30).normalize();
 backdirectionalLight.castShadow = true;
 scene.add(backdirectionalLight);
@@ -100,8 +100,8 @@ loader.load('scene.gltf', (gltf) => {
             child.receiveShadow = true;
         }
     });
-    mesh.position.set(0, -1.5, -1);
-    mesh.rotation.y = -Math.PI / 2;
+    mesh.position.set(0, -1.5, -0.5);
+    mesh.rotation.y = Math.PI;
     mesh.scale.set(5, 5, 5);
     scene.add(mesh);
 
