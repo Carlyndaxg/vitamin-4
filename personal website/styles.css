@@ -61,10 +61,6 @@ footer {
     padding: 10px 0;
     position: relative;
 }
-body {
-    padding-left: 330px;
-    padding-right: 330px;
-}
 /* display icon positioning and header positioning */
 .header-flex-container {
     display: flex; 
@@ -172,4 +168,9 @@ footer {
 }
 .lightmode #image-switch :last-child{
     display: block;
+}
+/* decrease left and right padding as browser size decreases horizontally */
+body {
+    padding-left: 330px;
+    padding-right: 330px;
 }
