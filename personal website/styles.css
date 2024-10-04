@@ -82,31 +82,49 @@ footer {
 .header a:hover, a:visited, a:link, a:active {
     text-decoration: none;
 }
-/* about page cat image overlap with text */
+/* about page cat image overlap with text 
 .about-image-container {
-    display: inline-block;
+    display: block;
+    z-index: 2;
+} */
+#about-main {
+    padding-top: 25px;
 }
 #about-cat {
-    position: absolute; 
-    top: 70px; 
-    left: 492px;
+    position: relative;
+    z-index: 5;
+    margin-top: -200px; 
+    margin-left: 153px;
 }
-#about-main {
-    padding-top: 45px;
-    z-index: -2;
+.lightmode #about-cat {
+    position: relative;
+    z-index: 5;
+    margin-top: -167px;
+    margin-left: 153px;
+}
+#about-text-container {
+    margin-top: -160px;
+}
+.lightmode #about-text-container {
+    margin-top: -160px
 }
 /* about page headshot positioning */
-#headshot-image {
-    position: absolute;
-    top: 85px;
-    right: 305px;
+.headshot-image {
+    margin-top: -15px;
+    margin-left: 590px;
     z-index: -1;
 }
-/* contact page image line up with text */
+#light-headshot {
+    margin-top: -10px;
+    margin-left: 607px;
+}
+/* contact page image line up with text top */
 #contact-cat {
-    position: absolute;
-    top: 160px;
-    left: 680px;
+    margin-left: 350px;
+    margin-bottom: -400px;
+}
+#contact-text {
+    margin-top: -20px;
 }
 /* 3d model */
 #model3d {
