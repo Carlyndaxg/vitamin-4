@@ -1,6 +1,7 @@
 // display mode 
 let lightmode = localStorage.getItem('lightmode');
 const themeSwitch = document.getElementById('theme-switch', 'image-switch', 'dropdown-switch');
+const mobilethemeSwitch = document.getElementById('mobile-theme-switch');
 
 const enableLightmode = () => {
   document.body.classList.add('lightmode');
@@ -22,3 +23,8 @@ themeSwitch.addEventListener('click', () => {
 
   console.log('switched display mode');
 });
+
+mobilethemeSwitch.addEventListener('click', () => {
+  lightmode = localStorage.getItem('lightmode');
+  lightmode !== 'active' ? enableLightmode() : disableLightmode();
+})

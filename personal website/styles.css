@@ -164,7 +164,7 @@ footer {
     --footer-text-color: #a8a8a8;
     --header-color: rgb(245, 242, 242, 0.95);
 }
-#theme-switch {
+#theme-switch, #mobile-theme-switch {
     height: 50px;
     width: 50px;
     background: transparent;
@@ -178,6 +178,15 @@ footer {
     display: none;
 }
 .lightmode #theme-switch :last-child{
+    display: block;
+}
+#mobile-theme-switch :last-child{
+    display: none;
+}
+.lightmode #mobile-theme-switch :first-child {
+    display: none;
+}
+.lightmode #mobile-theme-switch :last-child{
     display: block;
 }
 #image-switch {
@@ -218,8 +227,6 @@ body {
         padding-right: calc(330px - ( (1440px - 100vw) / 2 ));
     }
 }
-
-
 /* dropdown menu styling */
 .dropdown {
     display: none;
@@ -230,14 +237,47 @@ body {
     border: none;
 }
 .menu {
-    display: none;
     flex-direction: column;
     background-color: var(--base-color);
-    top: 100%
 }
-.menu and .menu-open {
-    display: flex;
+/* dropdown menu when opened */
+.menu {
+    font-family: PottaOne;
+    font-size: 17px;
+    text-decoration: none;
+    list-style: none;
+    position: absolute;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
+    top: 40px;
+    right: 76px;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    text-align: left;
+    min-width: 145px;
+    padding-left: 15px;
+    background: var(--footer-text-color);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 15px;
 }
+.menu a {
+    color: var(--body-text-color);
+}
+.menu li {
+    padding: 5px;
+    transition: text-decoration 0.5s ease;
+}
+.menu li:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+.menu.open-menu {
+    max-height: 400px;
+    opacity: 1;
+}
+/* mobile screen width positionings */
 @media screen and (max-width: 780px) {
     .header-flex-container {
         display: none;
@@ -252,11 +292,6 @@ body {
         position: absolute;
         padding-top: 60px;
         right: 68px;
-    }
-    .menu a {
-        text-decoration: none;
-        list-style: none;
-        color: var(--body-text-color);
     }
     .header-icon {
         position: absolute;
