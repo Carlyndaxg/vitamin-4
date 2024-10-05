@@ -1,6 +1,6 @@
 // display mode 
 let lightmode = localStorage.getItem('lightmode');
-const themeSwitch = document.getElementById('theme-switch', 'image-switch');
+const themeSwitch = document.getElementById('theme-switch', 'image-switch', 'dropdown-switch');
 
 const enableLightmode = () => {
   document.body.classList.add('lightmode');

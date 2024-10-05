@@ -9,12 +9,12 @@
 </head>
 <body>
     <header>
-        <div class="header-flex-container">
+        <div class="header-flex-container">  <!-- desktop menu -->
             <div>
                 <span id="largesize"><a href="index.html" title="Homepage" style="color: var(--body-text-color)"> Carlynda Gao &nbsp; </a></span>
             </div>
             <div>
-                <span id="smallerheader"><a href="projects.html" title="Projects" style="color: var(--body-text-color)" id="smallerheader"> Projects &nbsp; ·</a>
+                <a href="projects.html" title="Projects" style="color: var(--body-text-color)" id="smallerheader"> Projects &nbsp; ·</a>
             </div>
             <div>
                 <a href="about.html" title="About Me" style="color: var(--body-text-color)" id="smallerheader"> About &nbsp; ·</a>
@@ -32,9 +32,31 @@
                 </button>
             </div>
         </div>
+
+        <div class="dropdown">
+            <button class="select" style="background: transparent; border: none;" id="dropdown-switch">
+                <img src="dropdown.png" height="55" title="Dropdown Menu" alt="Dropdown menu"></a>
+                <img src="dropdown-lightmode.png" height="70" title="Dropdown Menu" alt="Dropdown menu"></a>
+            </button>
+            <div>
+                <span id="largesize"><a href="index.html" title="Homepage" style="color: var(--body-text-color)"  class="dropdown-name"> Carlynda Gao &nbsp; </a></span>
+            </div>
+            <ul class="menu">
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="CarlyndaGao-Resume.pdf" target="_blank">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="header-icon">
+                <button id="theme-switch">
+                    <img src="light-mode-icon.png" height="70" title="Display Mode" alt="Change the display mode" id="displayimage">
+                    <img src="dark-mode-icon.png" height="70" title="Display Mode" alt="Change the display mode" id="displayimage2">
+                </button>
+            </div>
+        </div>
     </header>
 
-    <main>
+    <main id="contact-main">
         <span id="largestsize"><p id="largefont" style="color: var(--body-text-color); padding-top: 10px;"> Projects </p></span>
     </main>
 

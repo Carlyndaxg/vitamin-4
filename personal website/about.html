@@ -9,7 +9,7 @@
 </head>
 <body id="about-entire-body"> <!-- can also separate css styles with semicolon, or utilize div tag-->
     <header>
-        <div class="header-flex-container">
+        <div class="header-flex-container">  <!-- desktop menu -->
             <div>
                 <span id="largesize"><a href="index.html" title="Homepage" style="color: var(--body-text-color)"> Carlynda Gao &nbsp; </a></span>
             </div>
@@ -29,6 +29,28 @@
                 <button id="theme-switch">
                     <img src="light-mode-icon.png" height="70" title="Display Mode" alt="Change the display mode" id="displayimage"></a>
                     <img src="dark-mode-icon.png" height="70" title="Display Mode" alt="Change the display mode" id="displayimage2"></a>
+                </button>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="select" style="background: transparent; border: none;" id="dropdown-switch">
+                <img src="dropdown.png" height="55" title="Dropdown Menu" alt="Dropdown menu"></a>
+                <img src="dropdown-lightmode.png" height="70" title="Dropdown Menu" alt="Dropdown menu"></a>
+            </button>
+            <div>
+                <span id="largesize"><a href="index.html" title="Homepage" style="color: var(--body-text-color)"  class="dropdown-name"> Carlynda Gao &nbsp; </a></span>
+            </div>
+            <ul class="menu">
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="CarlyndaGao-Resume.pdf" target="_blank">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="header-icon">
+                <button id="theme-switch">
+                    <img src="light-mode-icon.png" height="70" title="Display Mode" alt="Change the display mode" id="displayimage">
+                    <img src="dark-mode-icon.png" height="70" title="Display Mode" alt="Change the display mode" id="displayimage2">
                 </button>
             </div>
         </div>

@@ -110,7 +110,6 @@ footer {
 }
 /* about page headshot positioning */
 .headshot-image {
-    position: relative;
     margin-top: -15px;
     margin-left: 590px;
     z-index: -1;
@@ -126,10 +125,6 @@ footer {
 }
 #contact-text {
     margin-top: -20px;
-}
-#contact-li {
-    list-style: none;
-    margin-left: -35px;
 }
 /* 3d model */
 #model3d {
@@ -221,100 +216,33 @@ body {
 
 
 /* dropdown menu styling */
-.dropdown {
-    display: none;
+.dropdown * {
+    box-sizing: border-box;
 }
 .select {
+    display: flex;
     cursor: pointer;
-    background: none;
-    border: none;
 }
 .menu {
+    list-style: none;
+    padding: 0.2em 0.5 em;
+    background: #5a5a5a;
+    border: 1px #515151 solid;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    border-radius: 0.5em;
+    transform: translateX(-50%);
+    opacity: 0;
     display: none;
-    flex-direction: column;
-    background-color: var(--base-color);
-    top: 100%
+    z-index: 5
 }
-.menu and .menu-open {
-    display: flex;
+.menu li {
+    padding: 0.7em 0.5em;
+    margin: 0.3em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
 }
-@media screen and (max-width: 780px) {
-    .header-flex-container {
-        display: none;
-    }
-    .dropdown {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .select {
-        display: inline-block;
-        position: absolute;
-        padding-top: 60px;
-        right: 68px;
-    }
-    .menu a {
-        text-decoration: none;
-        list-style: none;
-        color: var(--body-text-color);
-    }
-    .header-icon {
-        position: absolute;
-        padding-right: 26px;
-        padding-top: 60px;
-        right: 10px;
-    }
-    .dropdown-name {
-        position: absolute;
-        padding-top: 16px;
-    }
-    /* homepage positioning with browser screen width <= 780px */
-    #model3d {
-        padding-bottom: 57px;
-        width: 40vw;
-        height: 40vh;  
-        margin: 0 auto;
-        text-align: center;
-        background: transparent;
-    }
-    #index-main {
-        padding-top: 60px;
-    }
-    /* about me page positioning with browser screen width <= 780px */
-    #image-switch {
-        position: absolute;
-        padding-top: 60px;
-        right: -25px;
-    }
-    #about-cat {
-        padding-top: 233px;
-    }
-    /* light mode about me page positioning w/ browser screen width <= 780px */
-    .lightmode #image-switch {
-        position: absolute;
-        right: 17px;
-    }
-    .lightmode #about-cat {
-        padding-top: 200px;
-    }
-    /* projects page positioning with browser screen width <= 780px */
-    #contact-main {
-        padding-top: 60px;
-    }
-    /* contact page positioning with browser screen width <= 780px */
-    #contact-body {
-        padding-top: 78px;
-    }
-    #contact-cat {
-        position: absolute;
-        padding-top: 76px;
-        right: 55px;
-    }
-}
-/* contact page cat positioning with even smaller browser screen width, 
-   decreases smoothly as width decreases past 640px */
-@media screen and (max-width: 620px) {
-    #contact-cat {
-        height: calc(310px - (620px - 100vw));
-    }
+
+.menu-open {
+    display: block;
+    opacity: 1;
 }

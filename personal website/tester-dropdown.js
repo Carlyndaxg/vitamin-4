@@ -87,55 +87,12 @@ scene.add(backdirectionalLight);
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);  // soft white light
 scene.add(ambientLight);
 
-/*
-// function to load the GLTF model based on browser screen width BUGGY DO NOT USE
-function loadModel(isMobile) {
-  const loader = new GLTFLoader().setPath('minecraft-jellie-cat/source/');
-  loader.load('scene.gltf', (gltf) => {
-      console.log('Loading model'); 
-      const mesh = gltf.scene;
-
-      mesh.traverse((child) => {
-          if (child.isMesh) {
-              child.castShadow = true;
-              child.receiveShadow = true;
-          }
-      });
-
-      if (isMobile) {
-          mesh.position.set(0, -1.5, -0.5); 
-          mesh.rotation.y = Math.PI;
-          mesh.scale.set(4.5, 4.5, 4.5); 
-          scene.add(mesh);
-      } else {
-          // for desktop
-          mesh.position.set(0, -1.5, -0.5);
-          mesh.rotation.y = Math.PI;
-          mesh.scale.set(5, 5, 5); 
-          scene.add(mesh);
-      }
-  });
-}
-
-// initial load of the model based on screen width
-loadModel(window.innerWidth <= 780);
-
-// update model on resize
-window.addEventListener('resize', () => {
-  // clear the existing model before loading a new one
-  while (scene.children.length > 0) {
-      scene.remove(scene.children[0]);
-  }
-
-  loadModel(window.innerWidth <= 780); 
-}); 
-*/
-
-// create gltf loader, no browser screen sensing
+// create gltf loader 
 const loader = new GLTFLoader().setPath('minecraft-jellie-cat/source/'); 
 loader.load('scene.gltf', (gltf) => {
     console.log('Loading model'); 
     const mesh = gltf.scene;
+
 
     mesh.traverse((child) => {
         if (child.isMesh) {
@@ -147,7 +104,10 @@ loader.load('scene.gltf', (gltf) => {
     mesh.rotation.y = Math.PI;
     mesh.scale.set(5, 5, 5);
     scene.add(mesh);
-});  
+
+// },  undefined, function(error) {
+    // console.error("An error occurred during model loading", error); 
+});  // check file path 
 
 // render scene 
 
@@ -205,19 +165,4 @@ dropdowns.forEach(dropdown => {
             option.classList.add('active');
         });
     });
-});
-
-// show or hide dropdown button based on screen width
-const dropdownButton = document.querySelector('.select'); 
-const menu = document.querySelector('.menu');
-
-dropdownButton.addEventListener('click', () => {
-    menu.classList.toggle('menu-open'); // toggle visibility of the menu when the button is clicked
-});
-
-// close dropdown if clicking outside of it
-window.addEventListener('click', (e) => {
-    if (!dropdownButton.contains(e.target) && !menu.contains(e.target)) {
-        menu.classList.remove('menu-open');
-    }
 });
